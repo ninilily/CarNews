@@ -1,0 +1,49 @@
+//
+//  PrefixHeader.pch
+//  歪车
+//
+//  Created by qianfeng on 15/10/9.
+//  Copyright (c) 2015年 YG. All rights reserved.
+//
+
+#define YGScreenW [UIScreen mainScreen].bounds.size.width
+#define YGScreenH [UIScreen mainScreen].bounds.size.height
+
+#import "ZCTool.h"
+#import "MJRefresh.h"
+#import "AFNetworking.h"
+#import "UIImageView+WebCache.h"
+#import "MJExtension.h"
+#import "UIView+Extension.h"
+#import "UIImage+Extension.h"
+#import "UIBarButtonItem+Extension.h"
+#import "SDWebImageManager.h"
+#import "SDImageCache.h"
+
+
+// 颜色
+#define HMColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+#define HMColorRGBA(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:a]
+
+// 随机色
+#define HMRandomColor HMColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
+
+#ifdef DEBUG
+#define YGLog(...) NSLog(__VA_ARGS__)
+#else
+#define YGLog(...) //NSLog(__VA_ARGS__)
+#endif
+
+//http://www.aitecar.com/json_list_pu_4?cat=4638
+
+//http://www.aitecar.com/json_list_pu_4/page/2?cat=177
+//牛车改装
+//http://app.api.niuche.com/modi/case
+//http://app.api.niuche.com/modi/cases?page=1&count=10&citt=nil
+//豪车展汇
+#define YGHaoche @"http://www.aitecar.com/json_list_pu_4"
+//汽车通缉
+#define YGTongji @"http://www.aitecar.com/json_list_pu_4"//?cat=4638"
+#define YGNiuChe @"http://app.api.niuche.com/modi/cases"
+//车标简介
+#define YGCarList @"http://price.cartype.kakamobi.com/api/open/car-type-basic/get-grouped-brand.htm"
